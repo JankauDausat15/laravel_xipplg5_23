@@ -7,7 +7,7 @@
   <title>E-Clouds - Dashboard Cuaca</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
 <body>
@@ -18,8 +18,8 @@
         <li id="nav-dashboard">Dashboard</li>
         <li id="nav-map">Map</li>
         <li>Saved Location</li>
-        <li><a href="calender.html" style="text-decoration: none; color: inherit;">Calendar</a></li>
-        <li id="nav-settings">Settings Bahasa</li>
+        <li>Calendar</li>
+        <li>Settings</li>
         <li id="toggleModeBtn">🌓 Mode</li>
         <li>Log Out</li>
       </ul>
@@ -77,22 +77,12 @@
       <h2 style="margin-bottom: 1rem;">Pilih Lokasi dari Peta</h2>
       <div id="map"></div>
     </div>
-
-    <!-- SETTINGS BAHASA SECTION -->
-    <div class="settings-page">
-      <div class="settings-container">
-        <h2>Pengaturan Bahasa</h2>
-        <div class="setting-item">
-          <label for="languageSelect">Bahasa</label>
-          <select id="languageSelect">
-            <option value="id">Indonesia</option>
-            <option value="en">English</option>
-          </select>
-        </div>
-        <div class="save-message" id="saveMessage">Bahasa telah disimpan!</div>
-      </div>
-    </div>
   </main>
-   <script src="js/script.js"></script>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src = "{{ asset('js/scripts.js') }}"></script>
+
+
 </body>
+
 </html>
